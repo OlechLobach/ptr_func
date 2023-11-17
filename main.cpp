@@ -1,6 +1,6 @@
 #include <iostream>
 #include <ctime>
-using namespace::std;
+using namespace std;
 const int arraySize = 5;  
 
 int generateRandomNumber(int min, int max) {
@@ -15,7 +15,7 @@ void calculateSum(const T* arrayA, const T* arrayB, T* arrayC, int size) {
 }
 
 int main() {
-    srand(static_cast<unsigned>(time(nullptr)));
+    srand(static_cast<unsigned>(time(0)));
 
     int arrayA[arraySize];
     int arrayB[arraySize];
@@ -34,19 +34,19 @@ int main() {
     for (int i = 0; i < arraySize; i++) {
         cout << arrayA[i] << " ";
     }
-    cout << std::endl;
+    cout << endl;
 
     cout << "Array B: ";
     for (int i = 0; i < arraySize; i++) {
         cout << arrayB[i] << " ";
     }
-    cout << std::endl;
+    cout << endl;
 
     cout << "Array C (Sum of A and B): ";
     for (int i = 0; i < arraySize; i++) {
         cout << arrayC[i] << " ";
     }
-    cout << std::endl;
+    cout << endl;
 
     return 0;
 }
