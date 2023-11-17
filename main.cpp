@@ -39,10 +39,10 @@ T Action(T** arrayA, T** arrayB, size_t rows, size_t cols, T(*func)(T**, size_t,
 }
 
 void GenerateRandomArray(int** array, size_t rows, size_t cols) {
-    srand(static_cast<unsigned int>(time(nullptr)));
+    srand(static_cast<unsigned int>(time(0)));
     for (size_t i = 0; i < rows; ++i) {
         for (size_t j = 0; j < cols; ++j) {
-            array[i][j] = (rand() % 100) + 1; // Generating numbers from 1 to 100
+            array[i][j] = (rand() % 100) + 1;
         }
     }
 }
@@ -72,11 +72,11 @@ int main() {
     GenerateRandomArray(arrayA, rows, cols);
     GenerateRandomArray(arrayB, rows, cols);
 
-    // Ensure uniqueness between arrays
+    
     for (size_t i = 0; i < rows; ++i) {
         for (size_t j = 0; j < cols; ++j) {
             while (arrayB[i][j] == arrayA[i][j]) {
-                arrayB[i][j] = (rand() % 100) + 1; // Regenerate if duplicate found
+                arrayB[i][j] = (rand() % 100) + 1; 
             }
         }
     }
